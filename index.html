@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Networks, Space and AI</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<!-- Theme used for syntax highlighting of code -->
+	    <link rel="stylesheet" href="lib/css/tomorrow.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<div class="bbox">
+						<h3>Networks, Space and AI</h3>
+						<p class="smallfnt" style="color: grey">with a grain of toxicity</p>
+						<hr class="shadow">
+						<p class="largefnt" style="text-align: center;">Marcus Märtens</p>
+						<p class="mediumfnt" style="text-align: center; background-color: lightgrey;margin:10%;">Follow this presentation on your device: <a href="https://coolrunning.github.io/esaentry_pres">https://coolrunning.github.io/esaentry_pres</a></p>
+						<table style="margin-top:200px">
+							<tbody class="invis" style="width:100%;">
+							<tr>
+								<td>
+									<img width="200px" height="110px" data-src="./img/NAS_blue_200px.png" alt="NAS logo">
+								</td>
+								<td style="padding-right:100px">
+									Network<br/>Architectures and<br/>Services
+								</td>
+								<td>
+									<img width="394px" height="110px" data-src="./img/TUDLogo.png" alt="TU Delft logo">
+								</td>
+							</tr>
+							</tbody>
+						</table>					
+					</div>
+				</section>
+
+				<section data-background="img/internet.png">
+					<div class="bbox">
+							<p class="fragment fade-in infobox">Barrett Lyon / The Opte Project<br/>
+							<b>Visualization of the routing paths of the Internet.</b></p>
+					</div>
+				</section>
+
+				<section data-background="img/galaxies.png">
+					<div class="bbox">
+							<p class="fragment fade-in infobox">B. C. Coutinho, Sungryong Hong, Kim Albrecht, Arjun Dey, Albert-László Barabási, et al.<br/>
+							<b>The Network Behind the Cosmic Web.</b></p>
+						</div>
+				</section>
+
+				<section>
+					<div class="bbox">
+						<img src="./img/hairball.png" height="100%"/>
+						<p class="fragment fade-in infobox">The hairball<br/>
+						<b>Your everyday network.</b></p>
+					</div>
+				</section>
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Network Science</h3></div>
+						<div class="sliderow">
+							<div class="leftcol" style="width:100%">
+								<p class="largefnt">
+								The study of the <b>structure</b> of <b>local interactions</b> between <b>agents</b> in <b>large-scale</b> systems.
+								</p>
+								<ul>
+									<li>Data-driven and inspired by the emergence of large-scale networks.</li>
+									<li>Multi-disciplinary in nature.</li>
+									<li>Theory based on statistical physics, mathematics and algorithmics.</li>
+								</ul>
+								</div>
+						</div>
+						<div class="sliderow" style="top:340px">
+								<div class="leftcol" style="width:55%">
+								<img src="img/tech-whois-net.png" width="250px"/>
+								<img src="img/plaw.svg" width="250px" style="padding-left:20px"/>
+								</div>								
+								<div class="rightcol" style="width:45%">
+								<p class="mediumfnt">Powerlaw degree distribution</p>
+								<p>$\Pr[k] \sim k^\gamma$</p>
+								<p class="mediumfnt">Scale-free Network</p>
+								</div>
+						</div>														
+						<div class="slidefooter" style="background-color:lightgray">
+							
+						</div>							
+					</div>
+				</section>				
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>The Automated Network Scientist</h3></div>
+						<div class="sliderow">
+							<div class="leftcol" style="width:75%">
+								<ul>
+									<li class="smallfnt">Network scientists compute <b>properties</b> of networks.</li>
+									<li class="smallfnt">Idea: Take properties as features and learn their relations!</li>
+									<li class="smallfnt">Symbolic Regression: Find formulas for difficult to compute properties!</li>
+								</ul>
+							<p class="mediumfnt" style="border:solid blue 4px; padding:10px">Idea: Evolve formula by <a href="http://www.cartesiangp.co.uk" target="_blank"><b>Cartesian Genetic Programming (CGP)</b></a></p>
+								<ul>
+									<li class="smallfnt">Example: Network Diameter by Laplacian Eigenvalues</li>
+								</ul>
+								<p class="mediumfnt">Genetic Programming can help to uncover <b>hidden relations</b> between network features!</p>
+							</div>
+							<div class="rightcol" style="width:25%">
+								<p>
+								<img src="./img/billy3.svg" width="150px" alt="a sample network">
+								<img src="./img/ca-netscience_net.svg" width="150px">
+								<img src="./img/diamplot_ca-netscience.svg" width="150px">
+								</p>								
+							</div>
+						</div>
+						<p class="infobox">M. Märtens, P. Van Mieghem, F. Kuipers<br/>
+						<b>Symbolic Regression on Network Properties</b>, <i>EUROGP2017, pp 131-146</i></p>
+					</div>
+				</section>	
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Information flow in brain networks</h3></div>
+						<div class="sliderow">
+							<div class="leftcol" style="width:60%">
+								<ul>
+									<li>MEG measurements of 78 brain regions</li>
+									<li>Compute Phase Transfer Entropy (PTE) to describe information exchange</li>
+									<li>Binarize matrix with threshold $\tau$ to get network</li>
+									<li><b>Network Motifs:</b> Frequently occuring subnetworks</li>
+								</ul>
+							
+							</div>
+							<div class="rightcol" style="width:40%">
+								<img src="./img/a2_pte_hm.png" width="225px"/>
+							</div>
+						</div>
+						<div class="sliderow" style="top:300px">
+							<div class="leftcol" style="width:220px">								
+								<img class="fragment fade-in" data-fragment-index="1" src="./img/motifs.svg" height="200px"  style="left: 0px; position: absolute"/>
+								<img class="fragment fade-in" data-fragment-index="2" src="./img/motifs2.svg" height="200px" style="left: 0px; position: absolute"/>
+								<img class="fragment fade-in" data-fragment-index="3" src="./img/motifs3.svg" height="200px" style="left: 0px; position: absolute"/>
+							</div>
+							<div class="leftcol" style="left: 245px; width: 50%">
+								<p class="fragment fade-in" data-fragment-index="1">Clustering of the brain</p>
+								<ol style="font-size: 14pt">
+									<li class="fragment fade-in" data-fragment-index="1">Search for all motif frequencies in the network</li>
+									<li class="fragment fade-in" data-fragment-index="2">Find statistically overrepresented motif</li>
+									<li class="fragment fade-in" data-fragment-index="3">Find partition of nodes such that least number of motifs are cut</li>
+									<li class="fragment fade-in" data-fragment-index="4">Map the clusters back to the brain</li>									
+								</ol>
+							</div>
+							<div class="rightcol" style="width:230px">
+								<img class="fragment fade-in" data-fragment-index="4" src="./img/brainmap.gif" width="230px" style="padding-top:50px"/>							
+							</div>
+						</div>
+						<div class="slidefooter">
+							<p class="mediumfnt fragment fade-in" date-fragment-index="5">Spatially coherent brain regions suggest higher order organization of information processing!</p>
+						</div>
+					
+					<p class="infobox">M. Märtens, J. Meier, A. Hillebrand, P. Tewarie, P. Van Mieghem<br/>
+					<b>Brain network clustering with information flow motifs</b>, <i>Applied Network Science, 2:25, Springer Open</i></p>				
+					</div>
+				</section>
+	
+
+				<section data-background="img/rage.gif">
+					<div class="bbox">
+						<div class="slideheader fragment fade-in"><h3 style="color: white">Toxicity Detection in Multiplayer Games</h3></div>
+						<div class="sliderow">
+							<div class="fragment fade-in" style="background-color: rgba(189, 189, 189, 0.85); margin-top:50px; padding:20px; padding-bottom: 60px">
+								<p><b>Toxicity</b></p>
+								<ul>
+									<li>Anti-social behavior towards <b>own</b> team-mates</li>
+									<li>Offensive language and insults</li>
+									<li>Data-driven study of chat communication of 10305 matches of Dota</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Data full of insults</h3></div>
+						<div class="sliderow">
+							<img src="./img/noobcloud.svg" width="100%">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Toxicity Study</h3></div>
+						<div class="sliderow">
+							<div class="leftcol">
+								<p class="mediumfnt"><b>Deployed algorithms</b></p>
+								<ul style="font-size:16pt">
+									<li>Toxicity detection by $n$-grams</li>
+									<li>Supervised Learning: SVM, predict winning team</li>
+									<li>Unsupervised Learning: Topic Model, LDA</li>
+									<li>Toxicity as transfer entropy</li>
+								</ul>
+								<p class="mediumfnt"><b>Key findings</b></p>
+								<ul style="font-size:16pt">
+									<li>Win-rate largely unaffected by toxicity</li>
+									<li>Kill events are likely triggers of toxicity</li>
+									<li>Once chances of winning diminish, toxicity increases</li>
+									<li>Susceptibility to toxicity is strongly heterogeneous</li>
+								</ul>
+							</div>
+							<div class="rightcol">
+								<img src="./img/predict_accuracy.png" width="90%"><br/>
+								<img src="./img/toxic_hist.png" width="90%">
+							</div>
+							
+						</div>
+					<p class="infobox">M. Märtens, S. Shen, A. Iosup and F. Kuipers<br/>
+					<b>Toxicity Detection in Multiplayer Onlien Games</b>, <i> IEEE NetGames2015, pp. 1-6</i></p>
+					</div>
+				</section>
+	
+				<section data-background="img/enterprise.gif">
+					<div class="bbox">
+							<div class="slideheader"><h3 style="color: white">Let us talk about the future</h3></div>
+					</div>
+				</section>
+
+				<section>
+					<div class="bbox">
+							<div class="slideheader"><h3>Where is AI now?</h3></div>
+							<div class="sliderow">
+								<div class="leftcol">
+									<p class="smallfnt fragment fade-in">
+									<img src="./img/alphago.jpg" height="200px"><br/>
+									human competitive performance at Go</p>
+									<p class="smallfnt fragment fade-in">
+									<img src="./img/melanom.jpg" height="200px" style="padding-top: 0px"><br/>
+									human competitive at diagnosis of skin cancer</p>
+								</div>
+								<div class="rightcol">
+									<p class="smallfnt fragment fade-in">
+									<img src="./img/autocar.jpg" height="200px"><br/>
+									prototype of autonomous cars on the roads</p>
+									<p class="smallfnt fragment fade-in">
+									<img src="./img/towel-folding.gif" height="200px" style="padding-top: 0px"><br/>
+									questionable performance at towel folding?</p>
+								</div>
+							</div>
+						</div>
+				</section>
+
+				<section data-background="img/colossus.jpg">
+					<div class="bbox">
+						<div class="slideheader"><h3 style="color: white; background-color: rgba(89, 89, 89, 0.5); padding-bottom:15px">Where does AI need to go?</h3></div>
+						<div class="sliderow">
+								<div class="fragment fade-in" style="background-color: rgba(189, 189, 189, 0.75); margin-top:20px; padding:20px; padding-bottom: 20px">
+										<p><b>Digital evolution</b></p>
+										<ul>
+											<li>First computers had their programs hard-coded</li>
+											<li>Later ones could be reprogrammed by patching cables and pulling levers</li>
+											<li>Only after <b>stored-program architectures</b> were invented, computers became the versatile <b>general purpose</b> devices that they are today.</li>
+										</ul><br/>
+								</div>
+								<div class="fragment fade-in" style="background-color: rgba(189, 189, 189, 0.75); margin-top:50px; padding:20px; padding-bottom: 20px">										
+										AI needs to do the same transition: away from hand-crafted systems towards general purpose architectures!
+								</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Key technologies</h3></div>
+						<div class="sliderow">
+							<p><ul>
+								<li><b>One-shot learning:</b> Learning by few training examples</li>
+								<li><b>Transfer learning:</b> Condense knowledge and apply accross domains</li>
+								<li><b>(Neuro)-evolution:</b> Growing and adapting to new environments</li>
+							</ul></p>
+							<span class="fragment fade-in">
+							<div style="border: 4px solid blue; padding:10px;"> First results in General Video Game Playing (GVGP)</div>
+							<div class="leftcol" style="top: 220px; width: 70%; height: 240px">
+							<p class="mediumfnt" style="text-align: left">
+								Testbed for reinforcement learning, planning, transfer, strategic reasoning and causation
+							<ul>
+								<li style="font-size: 14pt">Stephen Kelly, Malcolm I. Heywood<br><b>Emergent Tangled Graph Representations for Atari Game Playing Agents</b>, <i>EUROGP17, (pp. 64-79), Springer</i></li>
+								<li style="font-size: 14pt">Ken Kansky, Tom Silver, et al.<br><b>Schema Networks: Zero-shot Transfer with a Generative Causal Model of Intuitive Physics</b>, <i><a href="https://arxiv.org/abs/1706.04317">https://arxiv.org/abs/1706.04317</a></i></li>
+							</ul></p></div>
+							<div class="rightcol" style="top: 220px; width: 30%; height: 240px">							
+							<img src="./img/pacman.gif" width="200px" style="padding-top: 20px"/>
+							</div>
+							</span>
+						</div>
+					</div>
+				</section>				
+
+				<section>
+					<div class="bbox">
+					<div class="slideheader"><h3>Proposals</h3></div>
+					<div class="sliderow">
+						<p style="text-align:left">Proposal I: Take part (and win) a GVGP competition!</p>
+						<ul>
+							<li>Candidates: <a href="http://www.gvgai.net">www.gvgai.net</a>, <a href="https://github.com/openai/gym">OpenAI gym</a></li>
+							<li>Evaluate approaches and ACT tools (e.g. pagmo2, pyaudi, dCGP)</li>
+							<li>Development of expertise</li>
+							<li>Fun and glory</li>
+						</ul>						
+					
+						<p style="text-align:left">Proposal II: Organize an own (one-shot) competition</p>
+						<ul>
+							<li>Usage of Kelvins platform: <a href="https://kelvins.esa.int">https://kelvins.esa.int</a></li>
+							<li>Exclusive data required (to avoid participants to multi-shot)</li>
+							<li>Space related theme</li>
+							<li>Potential challenges: control (landing), classification of earth observation images (disaster)</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Autonomous learning in space</h3></div>
+						<div class="sliderow">					
+						<p class="mediumfnt fragment fade-in">Sometime in the future on a red planet...<p/>							
+							<img class="fragment fade-in" src="./img/exomars_small.jpg" width="200px"/>
+							<img class="fragment fade-in" src="./img/crater2.png" width="300px"/><br/>
+						
+						<p class="mediumfnt fragment fade-in">What is this? What to do next?<p/>
+						<img class="fragment fade-in" src="./img/spacebook.png"/>
+						
+						</div>						
+					</div>
+				</section>
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Autonomous learning in space</h3></div>
+						<div class="sliderow">					
+								<img src="./img/spacebookpost1.jpg"/ height="600px">
+						</div>						
+					</div>
+				</section>
+
+				<section>
+						<div class="bbox">
+							<div class="slideheader"><h3>Autonomous learning in space</h3></div>
+							<div class="sliderow">					
+									<img src="./img/spacebookpost2a.png"/>
+									<img class="fragment fade-in" src="./img/spacebookpost2b.png"/ style="margin-top: -12px">
+									<img class="fragment fade-in" src="./img/spacebookpost2c.png"/ style="margin-top: -12px">
+									<img class="fragment fade-in" src="./img/spacebookpost2d.png"/ style="margin-top: -12px">									
+							</div>						
+						</div>
+					</section>
+
+
+				<section>
+					<div class="bbox">
+					<div class="slideheader"><h3>Transfer learning</h3></div>
+						<div class="sliderow" style="margin-top:20px">
+							<div class="leftcol" style="text-align:center; border:solid darkgrey 3px;">
+								<img src="./img/transfer learning1.svg" width="300px" style="padding-top:20px"/>
+							</div>
+							<div class="rightcol" style="text-align:center; border:solid darkgrey 3px;">
+								<img src="./img/transfer learning2.svg" width="300px" style="padding-top:20px"/>
+							</div>
+						</div>
+						<div class="slidefooter">
+							<p class="largefnt" style="text-align:left">Proposal III: Explore transfer learning and similar concepts!</p>
+						</div>
+					</div>
+					<!--Information Diffusion
+					Connecting towards an evolution of AI - agents for population, fitness is their performance
+					Automated allocation of ressources
+					Cyber-crowdsourcing
+					shift from monolithic learning environments to smart learning networks
+					Can we learn from simulations?				
+					<p class="mediumfnt">
+						Examples of transfer learning
+						<ul>
+							<li>Can an AI learn how to self-drive cars from playing (a lot of) GTA?</li>
+							<li>Can an AI learn to understand dutch by listening to (a lot of) Germans?</li>
+						</ul>
+					</p>-->
+				</section>
+				
+				<section>				
+					<div class="bbox">
+						<div class="slideheader"><h3>Vision: Smart Learning Networks</h3></div>
+						<div class="sliderow">
+								<img src="./img/transfer learning3.svg" width="500px"/>
+						</div>						
+						<div class="slidefooter">
+							<ul>
+								<li>Exchange of models across domains</li>
+								<li>Cyber-crowdsourcing and information diffusion</li>
+								<li>Similarities to evoluationary optimization in Island model</li>
+							</ul>
+						</div>
+				</section>
+
+				<section>				
+						<div class="bbox">
+							<div class="slideheader"><h3>But most importantly...</h3></div>
+							<div class="sliderow">
+									<img class="fragment fade-in" data-fragment-index="1" src="./img/walle.gif"/>
+							<p class="fragment fade-in" data-fragment-index="1">
+								Let us make sure our intelligent robots will not be toxic...
+							</p>
+							<p class="fragment fade-in" data-fragment-index="2">
+								I am looking forward to some transfer learning from the ACT!<br/>
+								<b>Thank you!</b>
+							</p>
+					</section>
+					
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				
+				// workaround to get a nice representation for printing
+				pdfMaxPagesPerSlide: 1,
+
+				// Vertical centering of slides
+				center: false,
+
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+                
+				// Display the page number of the current slide
+				slideNumber: 'c/t',
+
+				// Transition style
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Transition speed
+				transitionSpeed: 'fast', // default/fast/slow
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// MathJax
+        			{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
