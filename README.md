@@ -4,7 +4,7 @@ This is the code repository of the presentation. To see the actual presentation 
 
 ## About
 
-In 2019 I joined the [Advanced Concepts Team](http://www.esa.int/gsp/ACT/index.html) of the [European Space Agency](https://www.esa.int) as a Research Fellow. This was my first presentation to present previous work and future ideas to the team.
+In 2019 I joined the [Advanced Concepts Team](http://www.esa.int/gsp/ACT/index.html) of the [European Space Agency](https://www.esa.int) as a Research Fellow. This was my first presentation to show some previous work and future ideas to my new team.
 
 ## How did you do this presentation?
 
